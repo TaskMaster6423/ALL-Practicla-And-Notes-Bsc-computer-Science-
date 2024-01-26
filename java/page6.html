@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="javacss/javacss.css">
+    <script src="/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sample Program 6 :Program to demonstrate HashTable</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+            import java.util.*;
+
+            class Demo{
+                public static void main(String args[]) {
+             
+                    // Creating Hashtable
+                    Hashtable<String,Integer>hashtable = new Hashtable<String,Integer>();
+            
+                    // Adding elements
+                    hashtable.put("a",100);
+                    hashtable.put("b",200);
+                    hashtable.put("c",300);
+                    hashtable.put("d",400);
+                    
+                    // Displaying Hashtable
+                    System.out.println(hashtable);
+             
+                    // Search for a value
+                    booleanval = hashtable.contains(400);
+                    
+                    System.out.println("is 400 present: "+val);
+             
+                    // Search for a key
+                    val = hashtable.containsKey("d");
+            
+                    System.out.println("is d present: "+val); 
+                }
+            }
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 6</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>
