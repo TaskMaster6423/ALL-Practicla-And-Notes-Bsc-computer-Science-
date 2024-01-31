@@ -1,6 +1,4 @@
 body {
-    height: 200vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,22 +16,21 @@ header {
     text-align: center;
     line-height: 80px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding-bottom: 40px;
+    padding-bottom: 20px; /* Reduce padding for mobile */
 }
 
 .code-display-container {
-    margin: 20px;
-    width: 80%;
-    max-width: 800px;
+    width: 90%; /* Adjusted width for mobile */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
     background: #ecf0f1;
-    padding: 20px;
+    padding: 15px; /* Adjusted padding for mobile */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
+    margin: 10px 0; /* Added margin for better spacing on mobile */
 }
 
 code {
-    display: block;
     white-space: pre-wrap;
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
@@ -45,24 +42,26 @@ code {
 
 .page-navigation {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 800px;
+    flex-direction: column; /* Change to column for mobile */
+    align-items: center; /* Center items for mobile */
+    width: 90%; /* Adjusted width for mobile */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
     margin-top: 20px;
 }
 
 .page-number {
     font-size: 18px;
+    margin-bottom: 10px; /* Added margin for better spacing on mobile */
 }
 
 .navigation-buttons {
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Change to column for mobile */
+    gap: 10px; /* Adjusted gap for mobile */
 }
 
 .navigation-button {
-    width: 120px;
+    width: 100%; /* Make the button full width on mobile */
     height: 40px;
     background: linear-gradient(45deg, #3498db, #2980b9);
     color: #fff;
@@ -71,25 +70,10 @@ code {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
+    margin-bottom: 10px; /* Added margin for better spacing on mobile */
 }
 
 .navigation-button:hover {
     background: linear-gradient(45deg, #2c3e50, #34495e);
     transform: scale(1.05);
-}
-
-/* Media Queries */
-@media only screen and (max-width: 600px) {
-    body {
-        height: auto;
-    }
-
-    .code-display-container {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .page-navigation {
-        width: 90%;
-    }
 }
