@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Display</title>
     <link rel="stylesheet" href="javacss/javacss.css">
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
     <header>
@@ -14,25 +14,25 @@
 
     <div class="code-display-container">
         <code>
-            import java.util.*; 
-            
-            public class LinkedList1{ 
-                public static void main(String args[]){ 
+import java.util.*; 
+
+public class LinkedList1{ 
+    public static void main(String args[]){ 
+        
+        LinkedList<String> al=new LinkedList<String>(); 
                     
-                    LinkedList<String> al=new LinkedList<String>(); 
+        al.add("Ravi"); 
+        al.add("Vijay"); 
+        al.add("Ravi"); 
+        al.add("Ajay"); 
+        
+        Iterator<String>itr=al.iterator(); 
                     
-                    al.add("Ravi"); 
-                    al.add("Vijay"); 
-                    al.add("Ravi"); 
-                    al.add("Ajay"); 
-                    
-                    Iterator<String>itr=al.iterator(); 
-                    
-                    while(itr.hasNext()){ 
-                        System.out.println(itr.next()); 
-                    } 
-                } 
-            } 
+        while(itr.hasNext()){ 
+            System.out.println(itr.next()); 
+        } 
+    } 
+} 
         </code>
     </div>
 
