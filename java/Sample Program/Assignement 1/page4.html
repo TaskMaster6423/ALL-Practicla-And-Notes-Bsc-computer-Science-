@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../javacss/javacss.css">
+    <script src="../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sample Program 4 : Program to demonstrate LinkedHashSet</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+import java.util.*; 
+            
+public class Test4{ 
+  public static void main(String args[]){ 
+    LinkedHashSet<String> set=new LinkedHashSet<String>(); 
+                    
+    set.add("Java"); 
+    set.add("ML"); 
+    set.add("Python"); 
+    set.add("AI"); 
+            
+    Iterator<String>itr=set.iterator(); 
+            
+    while(itr.hasNext()){ 
+      System.out.println(itr.next()); 
+    } 
+  } 
+}
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page">Page 4</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../javacss/javacss.css">
+    <script src="../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sample Program 7 : Program to demonstrate Iterator </h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+import java.util.ArrayList; 
+import java.util.Iterator; 
+ 
+public class Test { 
+  public static void main(String[] args) { 
+
+    ArrayList al = new ArrayList(); 
+ 
+    for (int i = 0; i< 10; i++) 
+      al.add(i); 
+                    
+    System.out.println(al); 
+                    
+    // at beginning itr(cursor) will point to 
+    // index just before the first element in al 
+    Iterator itr = al.iterator(); 
+ 
+    // checking the next element availabilty
+    while (itr.hasNext()) { 
+      // moving cursor to next element 
+      int i = (Integer)itr.next(); 
+ 
+      // getting even elements one by one 
+      System.out.print(i + " "); 
+
+      // Removing odd elements 
+      if (i % 2 != 0) 
+        itr.remove();
+    } 
+
+    System.out.println();
+    System.out.println(al); 
+  } 
+}
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 7</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

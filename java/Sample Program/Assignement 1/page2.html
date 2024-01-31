@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../javacss/javacss.css">
+    <script src="../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sample Program 2 : Program to demonstrate LinkedList</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+import java.util.*; 
+
+public class LinkedList1{ 
+  public static void main(String args[]){ 
+        
+    LinkedList<String> al=new LinkedList<String>(); 
+                    
+    al.add("Ravi"); 
+    al.add("Vijay"); 
+    al.add("Ravi"); 
+    al.add("Ajay"); 
+        
+    Iterator<String>itr=al.iterator(); 
+                    
+    while(itr.hasNext()){ 
+      System.out.println(itr.next()); 
+    } 
+  } 
+} 
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" value="2">Page 2</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>
