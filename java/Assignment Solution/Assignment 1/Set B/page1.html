@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewpoit" content="width=device-width,initial-scale">
+          <title>Code Display</title>
+
+          <link rel="stylesheet"href="../../../javacss/javacss.css">
+          <script src="../../../main.js"></script>
+     </head>
+     <body>
+          <header>
+               <h1>B] Q.1] Accept 'n' integers from the user.Store and display integers in sorted order having proper collection class.The collection should not accept duplicate elements. </h1>
+          </header>
+          <div class="code-display-container">
+               <code>
+import java.util.*;<br>
+import java.util.Scanner;<br>
+     public class B1 {<br>
+          public static void main(String[] args){<br>
+          Scanner sc=new Scanner(System.in);<br>
+          TreeSet &lt Object> ts=new TreeSet&lt>();<br>
+          System.out.println("Enter how many number:");<br>
+          int n=sc.nextInt();<br>
+          System.out.println("Enter the" +n+ "Numbers:");<br>
+          for(int i=0;i &lt n;i++){<br>
+          int num=sc.nextInt();<br>
+          ts.add(num);<br>
+          }<br>
+     System.out.println("Numbers in sorted order and without duplication:"+ts);<br>
+     sc.close();<br>
+     }<br>         
+}<br>
+                </code>
+         </div>
+         <div class="page-navigation">
+          <div class="page-number" id="page">Page 1</div>
+          <div class="navigation-buttons">
+              <button class="navigation-button" onclick="lastpage()">Previous</button>
+              <button class="navigation-button" onclick="nextPage()">Next</button>
+          </div>
+     </div>
+     </body>
+</html>

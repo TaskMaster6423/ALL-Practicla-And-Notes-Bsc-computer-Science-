@@ -11,14 +11,13 @@ body {
 }
 
 header {
-    height: 80px;
+    height: fit-content;
     width: 100%;
     background: #3498db;
     color: #fff;
     text-align: center;
-    line-height: 80px;
+    line-height: 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding-bottom: 40px;
 }
 
 .code-display-container {
@@ -50,6 +49,10 @@ code {
     width: 80%;
     max-width: 800px;
     margin-top: 20px;
+}
+
+h1{
+    text-wrap: balance;
 }
 
 .page-number {

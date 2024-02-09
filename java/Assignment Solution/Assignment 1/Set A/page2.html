@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewpoit" content="width=device-width,initial-scale">
+          <title>Code Display</title>
+
+          <link rel="stylesheet"href="../../../javacss/javacss.css">
+          <script src="../../../main.js"></script>
+     </head>
+     <body>
+          <header>
+               <h1>Q.2] Write a java program to read 'n' names of your friends,store it into linked list,also display content of same.</h1>
+          </header>
+          <div class="code-display-container">
+               <code>
+import java.util.*;<br>
+import java.util.Scanner;<br>
+     public class A2{<br>
+          public static void main(String[] args){<br>
+          Scanner sc=new Scanner(System.in);<br>
+          LinkedList&ltObject> ll=new LinkedList&lt>();<br>
+          System.out.println("Enter how many Friends:");<br>
+          int n=sc.nextInt();<br>
+          System.out.println("Enter the "+n+" Friends:");<br>
+          sc.nextLine();<br>
+          for(int i=0;i&lt n;i++){<br>
+          String fl=sc.nextLine();<br>
+          ll.add(fl);<br>
+     }<br>
+     System.out.println("Friends:"+ll);<br>
+     sc.close();<br>
+     }<br>
+}<br>
+                </code>
+         </div>
+         <div class="page-navigation">
+          <div class="page-number" id="page" >Page 2</div>
+          <div class="navigation-buttons">
+              <button class="navigation-button" onclick="previousPage()">Previous</button>
+              <button class="navigation-button" onclick="nextPage()">Next</button>
+          </div>
+      </div>
+     </body>
+</html>

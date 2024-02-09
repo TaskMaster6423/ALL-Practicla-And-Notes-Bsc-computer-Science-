@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewpoit" content="width=device-width,initial-scale">
+          <title>Code Display</title>
+
+          <link rel="stylesheet"href="../../../javacss/javacss.css">
+          <script src="../../../main.js"></script>
+     </head>
+     <body>
+          <header>
+               <h1>B] Q.2] Write a program to sort HashMap </h1>
+          </header>
+          <div class="code-display-container">
+               <code>
+import java.util.HashMap;<br>
+import java.util.TreeMap;<br>
+     public class B2 {<br>
+          public static void main(String[] args){<br>
+          HashMap<String,Integer>map=new HashMap&lt>();<br>
+          map.put("Prasad",2002);<br>
+          map.put("Ashish",2001);<br>
+          map.put("Suhas",2002);<br>
+          map.put("Swayam",2001);<br>
+          map.put("Sanket",2002);<br>
+          System.out.println("\nHashMap Details Before Sorting:\n"+map);<br>
+          TreeMap<Object,Object>tm=new TreeMap &lt>(map);<br>
+          System.out.println("\nHashMap DEtails After sorting:\n"+tm);<br>
+     } <br>
+}<br>         
+                </code>
+         </div>
+         <div class="page-navigation">
+          <div class="page-number" id="page" >Page 2</div>
+          <div class="navigation-buttons">
+              <button class="navigation-button" onclick="previousPage()">Previous</button>
+              <button class="navigation-button" onclick="nextPage()">Next</button>
+          </div>
+      </div>
+     </body>
+</html>

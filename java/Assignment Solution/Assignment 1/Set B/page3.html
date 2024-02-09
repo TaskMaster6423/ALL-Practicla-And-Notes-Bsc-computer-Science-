@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewpoit" content="width=device-width,initial-scale">
+          <title>Code Display</title>
+
+          <link rel="stylesheet"href="../../../javacss/javacss.css">
+          <script src="../../../main.js"></script>
+     </head>
+     <body>
+          <header>
+               <h1>B] Q.3] write a java program to loads names and phone numbers from a text file where the data is organized as one line per record and each field in a record are separeted by a tab(\t).it takes name or phone numbers as input and prints the corresponding other value from hash table(use hash table) </h1>
+          </header>
+          <div class="code-display-container">
+               <code>
+import java.io.*;<br>
+import java.util.Scanner;<br>
+import java.util.Hashtable;<br>
+     public class B3 {<br>
+          public static void main(String[] args) throws  Exception{<br>
+               try{<br>
+                    File f=new File("B3.txt");<br>
+                    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));<br>
+                    Hashtable<String,String>table=new Hashtable<>();<br>
+                    Scanner sc=new Scanner(System.in);<br>
+                    String line="";<br>
+                    while((line=br.readLine())!=null){<br>
+                         String[]parts=line.split(":");<br>
+                         String name=parts[0].trim();<br>
+                         String number=parts[1].trim();<br>
+                         if(!name.equals("")&&! number.equals("")){<br>
+                                   table.put(name,number);<br>
+                    }<br>
+               }<br>
+               System.out.println("Enter name:");<br>
+               String key=sc.nextLine();<br>
+               if(table.containsKey(key)){<br>
+                   System.out.println(table.get(key));<br>
+                   br.close();<br>
+                   sc.close();<br>
+               }<br>
+                                   
+          }catch(Exception e){<br>
+               System.out.println(e);<br>
+          }<br>
+     }<br>
+}<br>
+                </code>
+         </div>
+         <div class="page-navigation">
+          <div class="page-number" id="page" >Page 3</div>
+          <div class="navigation-buttons">
+              <button class="navigation-button" onclick="previousPage()">Previous</button>
+              <button class="navigation-button" onclick="firstpage()">Next</button>
+          </div>
+      </div>
+     </body>
+</html>

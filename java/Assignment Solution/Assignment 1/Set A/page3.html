@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewpoit" content="width=device-width,initial-scale">
+          <title>Code Display</title>
+
+          <link rel="stylesheet"href="../../../javacss/javacss.css">
+          <script src="../../../main.js"></script>
+     </head>
+     <body>
+          <header>
+               <h1>Q.3] Write a java program to create a new tree set,add some colors(string) and print out the tree set.</h1>
+          </header>
+          <div class="code-display-container">
+               <code>
+import java.util.*;<br>
+import java.util.Scanner;<br>
+     public class A3 {<br>
+          public static void main(String[] args){<br>
+               Scanner sc=new Scanner(System.in);<br>
+               TreeSet&ltObject> ts=new TreeSet&lt>();<br>
+               System.out.println("Enter how many Colours:");<br>
+               int n=sc.nextInt();<br>
+               System.out.println("Enter the "+n+" Colours:");<br>
+               sc.nextLine();<br>
+               for(int i=0;i&lt n;i++){<br>
+               String c=sc.nextLine();<br>
+               ts.add(c);<br>
+          }<br>
+          System.out.println("Colours:"+ts);<br>
+          sc.close();<br>
+     }<br>
+}<br>
+
+                </code>
+         </div>
+         <div class="page-navigation">
+          <div class="page-number" id="page" >Page 3</div>
+          <div class="navigation-buttons">
+              <button class="navigation-button" onclick="previousPage()">Previous</button>
+              <button class="navigation-button" onclick="nextPage()">Next</button>
+          </div>
+      </div>
+     </body>
+</html>
