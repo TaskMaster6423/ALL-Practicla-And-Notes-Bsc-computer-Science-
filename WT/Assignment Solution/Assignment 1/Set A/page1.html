@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.1] Write a PHP script to keep track of number of times the web page has been
+            access. [Use session and cookies]</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+ <b>
+ By session
+ a1.php
+ </b>
+  &lt;html>
+    &lt;head>
+      &lt;title>Number of times the web page has been visited&lt;/title>
+    &lt;/head>
+    &lt;body>
+      &lt;?php
+        session_start();
+        if(isset($_SESSION['count']))
+          $_SESSION['count']=$_SESSION['count']+1;
+        else
+          $_SESSION['count']=1;
+        echo"&lt;h3>This page is accessed&lt;/h3>".$_SESSION['count'];
+      ?>
+    &lt;/body>
+  &lt;/html>
+
+ <b>
+ By cookies
+ a1c.php
+ </b>
+  &lt;?php
+    if(isset($_COOKIE['cnt']))
+    {
+      $x=$_COOKIE['cnt'];
+      $x=$x+1;
+      setcookie('cnt',$x);
+    }
+    else
+    {
+      setcookie('cnt',2);
+      echo "you accessed this page 1st time";
+    }
+    echo "you accessed this page $x times";
+  ?>
+
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

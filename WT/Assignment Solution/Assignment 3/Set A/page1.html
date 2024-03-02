@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.1] Write a javascript to display message ‘Exams are near, have you started
+            preparing for?’ using alert,
+            prompt and confirm boxes. Accept proper input from user and display
+            messages accordingly.</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>b1.html</b>
+
+  &lt;html>
+    &lt;head>
+      &lt;script type="text/javascript">
+        function myfunc()
+        {
+          alert("Exams are near, have you started preparing for?");
+          var res=prompt("please enter your response:");
+          if(res!=null && res!="")
+          {
+            confirm("your response is "+res+"Thank you for your response!");
+          }
+          else
+          {
+            confirm("you did not enter a response.please try again later.");
+          }
+        }
+      &lt;/script>
+    &lt;/head>
+    &lt;body>
+        &lt;input type="button" onclick="myfunc()" value="Display a confirm box">
+    &lt;/body>
+  &lt;/html>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

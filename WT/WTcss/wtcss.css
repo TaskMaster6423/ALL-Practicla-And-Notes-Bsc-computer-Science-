@@ -1,0 +1,122 @@
+body {
+    height: 200vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    height: fit-content;
+    width: 100%;
+    background: #e26254;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.code-display-container {
+    margin: 20px;
+    width: 80%;
+    max-width: 800px;
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.program-button {
+    width: 300px;
+    height: 80px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform-origin: center;
+    overflow: hidden;
+}
+
+
+.page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+h1{
+    text-wrap: balance;
+}
+
+.page-number {
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation-button {
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.navigation-button:hover {
+    background: linear-gradient(45deg, #502c2c, #5e3434);
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    body {
+        height: auto;
+    }
+
+    .code-display-container {
+        text-size-adjust: 10%;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .page-navigation {
+        width: 90%;
+    }
+}

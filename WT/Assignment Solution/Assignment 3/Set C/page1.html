@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.1] Write a Javascript program to accept name of student, change font color to
+            red, font size to 18 if student
+            name is present otherwise on clicking on empty text box display image which
+            changes its size (Use
+            onblur, onload, onmousehover, onmouseclick, onmouseup)</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+  &lt;html>
+    &lt;head>
+      &lt;title>Student Name Input&lt;/title>
+      &lt;script>
+        function checkName()
+        {
+          var nameInput=document.getElementById("name");
+          var name=nameInput.value;
+          if(name)
+          {
+            nameInput.style.color="red";
+            nameInput.style.fontSize="18px";
+          }
+          else
+          {
+            var image=document.getElementById("image");
+            image.style.display="black";
+          }
+        }
+        function resizeImage()
+        {
+          var image=document.getElementById("image");
+          image.style.width="200px";
+        }
+      &lt;/script>
+    &lt;/head>
+    &lt;label for="name">Enter student name:&lt;/label>
+    &lt;input type="text" id="name" onblur="checkName()"/>
+    &lt;img src="img.jpg" id="image" onload="resizeImage()" 
+        onmouseover="this.style.width='100px'" 
+        onmouseup="this.style.width='200px'" style="display: none;"/>
+    &lt;/body>
+  &lt;/html>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

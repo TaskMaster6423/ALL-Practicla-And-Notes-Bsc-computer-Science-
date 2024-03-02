@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.2] Write a PHP script to change the preferences of your web page like font
+            style, font size, font color, background color using cookie. Display selected
+            setting on next web page and actual implementation (with new settings) on
+            third page.</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>    a2.html</b>
+
+  &lt;html>
+    &lt;body>
+      &lt;form action="a1_1.php" method="get">
+        &lt;center>
+          &lt;b>Enter font style:&lt;/b>&lt;input type=text name=s1>
+          &lt;br>
+          &lt;b>Enter font size:&lt;/b>&lt;input type=text name=s>
+          &lt;br>
+          &lt;b>Enter font color:&lt;/b>&lt;input type=text name=c>
+          &lt;br>
+          &lt;b>Enter background color:&lt;/b>&lt;input type=text name=b>
+          &lt;br>
+          &lt;input type=submit value="next">
+        &lt;/center>
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+<b>a1_1.php</b>
+
+  &lt;?php
+    echo "style is".$_GET['s1']."&lt;br>color is ".$_GET['c']."&lt;br>Background color
+    is ".$_GET['b']."&lt;br>size is".$_GET['s'];
+    
+    setcookie("set1",$_GET['s1'],time()+3600);
+    setcookie("set2",$_GET['c'],time()+3600);
+    setcookie("set3",$_GET['b'],time()+3600);
+    setcookie("set4",$_GET['s'],time()+3600);
+  ?>
+  &lt;html>
+    &lt;body>
+      &lt;form action="a1_2.php">
+        &lt;input type=submit value=ok>
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+  <b>a1_2.php</b>
+  
+  &lt;?php
+    $style =$_COOKIE['set1'];
+    $color=$_COOKIE['set2'];
+    $size=$_COOKIE['set4'];
+    $b_color=$_COOKIE['set3'];
+    $msg="H V Desai college ";
+    echo "&lt;body bgcolor=$b_color>";
+    echo "&lt;font color=$color size=$size > $msg";
+    echo "&lt;/font>&lt;/body>";
+  ?>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 2</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="firstpage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

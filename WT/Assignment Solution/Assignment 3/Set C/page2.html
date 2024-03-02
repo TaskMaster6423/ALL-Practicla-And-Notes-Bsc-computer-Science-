@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.2] Remove div section elements after clicking on button using jQuery.
+            [Hint : Use #id selector]</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+  &lt;html>
+    &lt;head>
+      &lt;title>Remove Div Element Example&lt;/title>
+      &lt;script type="text/javascript" src="jquery.js">&lt;/script>
+      &lt;script>
+        $(document).ready(function(){
+          $("#removeBtn").click(function() {
+            $("#myDiv").remove();
+          });
+        });
+      &lt;/script>
+    &lt;/head>
+    &lt;body>
+      &lt;div id="myDiv">
+        &lt;p>this is the content of the div section &lt;/p>
+        &lt;button id="removeBtn">Remove Div&lt;/button>
+      &lt;/div>
+    &lt;/body>
+  &lt;/html>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 2</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="firstpage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

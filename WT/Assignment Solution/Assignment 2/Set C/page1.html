@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>1. Create a XML file which gives details of movies available in “Movie CD Store
+            “ from following categories <br>
+            a) Classical <br>
+            b) Horror <br>
+            c) Action <br>
+            Elements in each category are in the following format Save the file with name
+            “movies.xml”<br>
+            </h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>movies.xml</b>
+  &lt;?xml version="1.0" encoding="UTF-8"?>
+  &lt;MovieInfo>
+    &lt;Movie category="classical">
+      &lt;MovieNo>101&lt;/MovieNo>
+      &lt;MovieTitle>100 Days&lt;/MovieTitle>
+      &lt;ActorName>Amitabh&lt;/ActorName>
+      &lt;Releaseyear>2000&lt;/Releaseyear>
+    &lt;/Movie>
+    &lt;Movie category="Horror">
+      &lt;MovieNo>102&lt;/MovieNo>
+      &lt;MovieTitle>dancer&lt;/MovieTitle>
+      &lt;ActorName>Anil kapoor&lt;/ActorName>
+      &lt;Releaseyear>2001&lt;/Releaseyear>
+    &lt;/Movie>
+    &lt;Movie category="Action">
+      &lt;MovieNo>103&lt;/MovieNo>
+      &lt;MovieTitle>dhun&lt;/MovieTitle>
+      &lt;ActorName>Akshay kumar&lt;/ActorName>
+      &lt;Releaseyear>2005&lt;/Releaseyear>
+    &lt;/Movie>
+  &lt;/MovieInfo>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="">Next</button>
+        </div>
+    </div>
+</body>
+</html>

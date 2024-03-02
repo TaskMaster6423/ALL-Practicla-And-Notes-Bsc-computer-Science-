@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.1] Create a form to accept customer information ( Name, Addr, MobNo). Once
+            the customer information is accepted, accept product information in the next
+            form (ProdName, Qty,Rate). Generate the bill for the customer in the next form.
+            Bill should contain the customer information and the information of the
+            products entered.
+            </h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>c1.html</b>
+
+  &lt;html>
+    &lt;body>
+      &lt;form method="post" action="c1_1.php">
+        &lt;table border="1">
+          &lt;tr>
+            &lt;td>customer name:&lt;/td>
+            &lt;td>&lt;input type="text" name="name">&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;td>customer phone number:&lt;/td>
+            &lt;td>&lt;input type="text" name="ph_no">&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;td>customer address:&lt;/td>
+            &lt;td>&lt;input type="text" name="address">
+            &lt;/td>&lt;input type="text" name="address">
+            &lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;td>&lt;/td>
+            &lt;td>&lt;input type="submit" value="save">
+            &lt;/td>
+          &lt;/tr>
+        &lt;/table>
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+  <b>c1_1.php</b>
+
+  &lt;html>
+    &lt;body>
+      &lt;?php
+        setcookie('name',$_POST["name"]);
+        setcookie('ph_no',$_POST["ph_no"]);
+        setcookie('address',$_POST["address"]);
+        echo "Hello".$_POST["name"]."!Enter Details ...&lt;br>";
+      ?>
+      &lt;form method="post" action="c1_2.php">
+        &lt;table border="1">
+          &lt;tr>&lt;td>product name:&lt;/td>&lt;td>&lt;input type="text" name="pname">&lt;/td>&lt;/tr>
+          &lt;tr>&lt;td>quantity:&lt;/td>&lt;td>&lt;input type="text" name="qty">&lt;/td>&lt;/tr>
+          &lt;tr>&lt;td>rate:&lt;/td>&lt;td>&lt;input type="text" name="rate">&lt;/td>&lt;/tr>
+          &lt;tr>&lt;td>&lt;/td>&lt;td>&lt;input type="submit" name="submit" value="display">&lt;/td>&lt;/tr>
+        &lt;/table>
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+<b>c1_2.php</b>
+
+  &lt;html>
+    &lt;body>
+      &lt;?php
+        echo "&lt;b> customer details&lt;/b>&lt;br>";
+        echo "&lt;table border='1'>";
+        echo "&lt;tr>&lt;td>";
+        echo "customer Name:".$_COOKIE["name"]."&lt;br>";
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "customer phone:".$_COOKIE["ph_no"]."&lt;br>";
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "customer address:".$_COOKIE["address"]."&lt;br>";
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "&lt;b>customer bill&lt;/b>&lt;br>";
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "pname:".$_REQUEST["pname"];
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "qty:".$_REQUEST["qty"];
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;tr>&lt;td>";
+        echo "rate:".$_REQUEST["rate"];
+        echo "&lt;/tr>&lt;/td>";
+        echo "&lt;/table>";
+        if(isset($_POST['submit']))
+        {
+          $qty=(int)$_POST['qty'];
+          $rate=(int)$_POST['rate'];
+          $total=$qty*$rate;
+          echo "total=".$total;
+        }
+      ?>
+    &lt;/body>
+  &lt;/html>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

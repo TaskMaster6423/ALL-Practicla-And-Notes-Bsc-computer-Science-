@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.1] Write PHP script to read above created “book.xml” file into simpleXML
+            object. Display attributes and elements .(Hint L simple_xml_load_file()
+            function)</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>b1.php</b>
+
+  &lt;?php
+    $xml=simplexml_load_file("book.xml");
+    $list = '&lt;h2 align="center">Books List&lt;/h2>';
+    $list .='&lt;table border="3" align="center" cellpadding="5">
+    &lt;tr>
+      &lt;th>#&lt;/th>
+      &lt;th>bookno&lt;/th>
+      &lt;th>bookname&lt;/th>
+      &lt;th>authorname&lt;/th>
+      &lt;th>price&lt;/th>
+      &lt;th>year&lt;/th>
+    &lt;/tr>';
+    $key=1;
+    foreach($xml as $info):
+    $list .= "&lt;tr>
+      &lt;td>".$key++."&lt;/td>
+      &lt;td>".$info->bookno."&lt;/td>
+      &lt;td>".$info->bookname."&lt;/td>
+      &lt;td>".$info->authorname."&lt;/td>
+      &lt;td>".$info->price."&lt;/td>
+      &lt;td>".$info->year."&lt;/td>
+    &lt;/tr>";
+    endforeach;
+    $list .= '&lt;/table>';
+    echo $list;
+  ?>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

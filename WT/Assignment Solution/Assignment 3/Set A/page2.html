@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.2] Add or append in paragraph text and also in the numbered(ordered) list in a
+            given HTML document
+            using jQuery selectors.
+            [Hint : Use Append( ) method]</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+  &lt;html>
+    &lt;head>
+      &lt;script src=“jquery.js”>&lt;/script>
+      &lt;script>
+        $(document).ready(function()
+        {
+          $("#btn1").click(function()
+          {
+            $("my-paragraph").append("new text added to the paragraph.");
+          });
+          $("#btn2").click(function()
+          {
+            $("ol").append("&lt;li>Appended item&lt;/li>");
+          });
+        });
+      &lt;/script>
+    &lt;/head>
+    &lt;body>
+      &lt;p id="my-paragraph">This is a paragraph.&lt;/p>
+      &lt;ol id="my-ordered-list">
+        &lt;li>Item 1&lt;/li>
+        &lt;li>Item 2&lt;/li>
+        &lt;li>Item 3&lt;/li>
+        &lt;button id="btn1">Append text&lt;/button>
+        &lt;button id="btn2">Append list items&lt;/button>
+    &lt;/body>
+  &lt;/html>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 2</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="firstpage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

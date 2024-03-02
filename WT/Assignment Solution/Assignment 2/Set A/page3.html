@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.3] Write a PHP script to generate an XML file in the following format in PHP.
+        </h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>a3.php</b>
+
+  &lt;?php
+    $str =&lt;&lt;&lt;XML
+    &lt;?xml version="1.0" encoding="UTF-8"?>
+    &lt;BookInfo>
+      &lt;book>
+        &lt;bookno>1&lt;/bookno>
+        &lt;bookname>JAVA&lt;/bookname>
+        &lt;authorname> Balguru Swami&lt;/authorname>
+        &lt;price>250&lt;/price>
+        &lt;year>2006&lt;/year>
+      &lt;/book>
+      &lt;book>
+        &lt;bookno>2&lt;/bookno>
+        &lt;bookname>C&lt;/bookname>
+        &lt;authorname> Denis Ritchie&lt;/authorname>
+        &lt;price>500&lt;/price>
+        &lt;year>1971&lt;/year>
+      &lt;/book>
+    &lt;/BookInfo>
+
+    XML;
+    $fname="book.xml";
+    $fp = fopen($fname,"w");
+    fwrite($fp, $str);
+    fclose($fp);
+    echo "created filename is:".$fname;
+  ?>
+
+<b>book.xml generated file</b>
+  &lt;?xml version="1.0" encoding="UTF-8"?>
+  &lt;BookInfo>
+    &lt;book>
+      &lt;bookno>1&lt;/bookno>
+      &lt;bookname>JAVA&lt;/bookname>
+      &lt;authorname> Balguru Swami&lt;/authorname>
+      &lt;price>250&lt;/price>
+      &lt;year>2006&lt;/year>
+    &lt;/book>
+    &lt;book>
+      &lt;bookno>2&lt;/bookno>
+      &lt;bookname>C&lt;/bookname>
+      &lt;authorname> Denis Ritchie&lt;/authorname>
+      &lt;price>500&lt;/price>
+      &lt;year>1971&lt;/year>
+    &lt;/book>
+  &lt;/BookInfo>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 3</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="firstpage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

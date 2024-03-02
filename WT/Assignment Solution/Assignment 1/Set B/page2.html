@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.2] Write a PHP script to accept Employee details (Eno, Ename, Address) on
+            first page. On second page accept earning (Basic, DA, HRA). On third page
+            print Employee information (Eno, Ename, Address, Basic, DA, HRA, Total) [
+            Use Session]</h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+  &lt;html>
+    &lt;body>
+      &lt;form action="b2_1.php" method="get">
+        &lt;center> &lt;h2>Enter Employee Details :&lt;/h2> &lt;br>
+          &lt;table>
+            &lt;tr> &lt;td>&lt;b>Emp no :&lt;/b>&lt;/td> &lt;td>&lt;input type=text name=eno>&lt;/td>
+            &lt;/tr>
+            &lt;tr> &lt;td>&lt;b> Name :&lt;/b>&lt;/td> &lt;td>&lt;input type=text name=enm>&lt;/td>
+            &lt;/tr>
+            &lt;tr> &lt;td>&lt;b>Address :&lt;/b>&lt;/td> &lt;td>&lt;input type=text name=eadd>&lt;/td>
+            &lt;/tr>
+          &lt;/table>
+          &lt;br> &lt;input type=submit value=Show name=submit>
+        &lt;/center>
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+<b>b2_1.php</b>
+
+  &lt;?php
+    session_start();
+    $eno = $_GET['eno'];
+    $enm = $_GET['enm'];
+    $eadd = $_GET['eadd'];
+    $_SESSION['eno'] = $eno;
+    $_SESSION['enm'] = $enm;
+    $_SESSION['eadd'] = $eadd;
+  ?>
+  &lt;html>
+    &lt;body>
+      &lt;form action="b2_2.php" method="post">
+        &lt;center>
+          &lt;h2>Enter Earnings of Employee:&lt;/h2>
+            &lt;table>
+              &lt;tr>&lt;td>Basic : &lt;/td>&lt;td>&lt;input type="text" name="e1">&lt;/td>&lt;tr>
+              &lt;tr>&lt;td>DA : &lt;/td>&lt;td>&lt;input type="text" name="e2">&lt;/td>&lt;/tr>
+              &lt;tr>&lt;td>HRA : &lt;/td>&lt;td>&lt;input type="text" name="e3">&lt;/td>&lt;/tr>
+              &lt;tr>&lt;td>&lt;/td>&lt;td>&lt;input type="submit" value=Next>&lt;/td>&lt;/tr>
+            &lt;/table>
+        &lt;/center>
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+<b> b2_2.php</b>
+  &lt;?php
+    session_start();
+    $e1 = $_POST['e1'];
+    $e2 = $_POST['e2'];
+    $e3= $_POST['e3'];
+    echo "&lt;h3>Employee Details&lt;/h3> ";
+    echo "Name : ".$_SESSION['eno']."&lt;br>";
+    echo "Address : ".$_SESSION['enm']."&lt;br>";
+    echo "Class : ".$_SESSION['eadd']."&lt;br>&lt;br>";
+    echo "basic : ".$e1."&lt;br>";
+    echo "DA : ".$e2."&lt;br>";
+    echo "HRA : ".$e3."&lt;br>";
+    $total = $e1+$e2+$e3;
+    echo "&lt;h2>Total Of Earnings Is : ".$total."&lt;/h2>";
+  ?>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 2</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="firstpage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

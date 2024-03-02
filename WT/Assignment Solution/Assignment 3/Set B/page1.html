@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.1] Write a javascript function to validate username and password for a
+            membership form.
+            </h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+  &lt;html>
+    &lt;body>
+      &lt;title>membership form&lt;/title>
+      &lt;script type="text/javascript">
+        function validate()
+        {
+          var name=document.getElementById("n1").value;
+          var pass=document.getElementById("n2").value;
+          if(name==null || name=="")
+          {
+            alert("name can't be blank");
+            return false;
+          }
+          else if(pass.length&lt;6)
+          {
+            alert("password must be at least 6 characters");
+            return false;
+          }
+        }
+      &lt;/script>
+    &lt;body>
+      &lt;form name="myform" method="post" onsubmit="return validate()" action="login.html">
+        Username:&lt;input type="text" name="name" id="n1">&lt;br/>
+        password:&lt;input type="password" name="pass" id="n2">&lt;br/>
+        &lt;input type="submit" value="register">
+      &lt;/form>
+    &lt;/body>
+  &lt;/html>
+
+
+<b>login.html</b>
+
+  &lt;html>
+    &lt;body>
+      &lt;h1>Login successfully&lt;/h1>
+    &lt;/body>
+  &lt;/html>
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 1</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="lastpage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="../../../WTcss/wtcss.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Q.2] Link “ Item. Xml” file to the CSS style sheet and get well formatted output as
+            given below <br>
+            i) ItemName : <br>
+            Color : red; <br>
+            Font-family : copperplate Gothic Light; <br>
+            Font-size : 16pt; <br>
+            Font :bold; <br>
+            ii) ItemPrice and Quantity <br>
+            Color:yellow; <br>
+            font-family:Arial; <br>
+            font-size:12 pt; <br>
+            font:bold; <br></h1>
+    </header>
+
+    <div class="code-display-container">
+        <code>
+<b>Item.css</b>
+
+ItemName
+{
+  Color : red;
+  Font-family : copperplate Gothic Light;
+  Font-size : 16pt;
+  Font :bold;
+}
+
+ItemPrice,Quantity
+{
+  color:yellow;
+  font-family:arial;
+  font-size:12pt;
+  font:bold;
+}
+
+        </code>
+    </div>
+
+    <div class="page-navigation">
+        <div class="page-number" id="page" >Page 2</div>
+        <div class="navigation-buttons">
+            <button class="navigation-button" onclick="previousPage()">Previous</button>
+            <button class="navigation-button" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+</body>
+</html>
